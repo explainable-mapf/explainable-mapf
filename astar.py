@@ -134,7 +134,7 @@ class AstarSolver:
             stdata['history'][self.initNodes[ag]]=ag
         stdata['segments'] = 0
         startNode=AstarNode(None,stdata,self.graph,self.targetNodes)
-        print(startNode)
+        #print(startNode)
 
         gscore={startNode:0}
         fscore={startNode:self.heuristicVal(startNode)}
@@ -148,23 +148,23 @@ class AstarSolver:
         start = timer()
 
         while openSet:
-            diagCounter+=1
+            #diagCounter+=1
             curNode = heapq.heappop(openSet)[1]
             openSetHash.remove(curNode)
 
-            if diagCounter == 1000:
-                end=timer()
-                if int(end)-int(start)>timeout:
-                    self.runtime=end-start
-                    return False
-                diagCounter=0
-                print("Open Set Size: "+ str(len(openSet)))
-                print("Closed Set Size: " + str(len(closedSet)))
-                print("Current Node: "+ str(curNode))
+            # if diagCounter == 1000:
+            #     end=timer()
+            #     if int(end)-int(start)>timeout:
+            #         self.runtime=end-start
+            #         return False
+            #     diagCounter=0
+            #     print("Open Set Size: "+ str(len(openSet)))
+            #     print("Closed Set Size: " + str(len(closedSet)))
+            #     print("Current Node: "+ str(curNode))
 
 
             if self.isGoal(curNode):
-                print("Reached the goal!"+str(curNode))
+                #print("Reached the goal!"+str(curNode))
                 self.computePlan(curNode)
                 end=timer()
                 self.runtime=end-start

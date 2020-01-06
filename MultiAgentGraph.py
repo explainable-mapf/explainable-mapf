@@ -87,7 +87,7 @@ class MultiAgentGraph:
             self.foundPlan = True
             for ag in self.agents:
                 plan = solver.getPlan(ag)
-                print(plan)
+                #print(plan)
                 self.agents[ag]['plan'] = plan
         else:
             print("No plan")
@@ -104,7 +104,7 @@ class MultiAgentGraph:
             self.foundPlan = True
             for ag in self.agents:
                 plan = solver.getPlan(ag)
-                print(plan)
+                #print(plan)
                 self.agents[ag]['plan'] = plan
         else:
             print("No plan")

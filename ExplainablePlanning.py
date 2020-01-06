@@ -71,7 +71,6 @@ class BenchTester:
     def readGraph(self,graphFile,benchFile):
         self.graph_file=graphFile
         self.bench_file=benchFile
-
         self.graph = MultiAgentGraph.MultiAgentGraph.readGraphFile(self.graph_file)
         self.setupGraph()
         self.readBenchmarkData()
@@ -86,11 +85,9 @@ class BenchTester:
         outstr += self.mag.resultOutput()
         return outstr
 
-
     def log(self, text):
-        print("LOG: "+text)
-
-
+        pass
+        #print("LOG: "+text)
 
 
 if __name__ == "__main__":
