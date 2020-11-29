@@ -16,3 +16,7 @@ To run all the tests, use runtests.sh.
 
 The required .map and .scen files are listed in tests.txt, and should be put in the same folder as the code and script files.
 
+#CBS-generated Plans 
+The file CBS_Plans.7z contains pairs of files of the form (scenario.yaml,scenario.schd).
+The .yaml file represents the instance, and then .schd file represents the plan found by CBS.
+Both files are YAML files.
